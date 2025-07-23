@@ -17,5 +17,6 @@ This repository contains isolated examples of React performance and architecture
 2. Checkout the branch you're interested in.
 3. Install dependencies and start the dev server:
 
-   `npm install`
-   `npm start`
+   ### `npm install`
+
+   ### `npm start`
