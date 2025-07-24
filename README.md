@@ -11,7 +11,16 @@ This repository contains isolated examples of React performance and architecture
     - `<Suspense />` provides a fallback UI (like a loader) during the lazy load.
 
 - [`slider-lazy-loading`](https://github.com/ronadabasha/react-optimization-techniques/tree/lazy-loading-slider)
+
   - Demonstrates lazy loading of image sliders.
+
+- [`lazy-loading-modal`](https://github.com/ronadabasha/react-optimization-techniques/tree/lazy-loading-modal)
+
+  - Shows lazy loading for modals using `React.lazy()`, `<Suspense />`.
+    Other technologies used: Material UI (MUI) for the Modal.
+    - `React.lazy()` loads the Modal only on button click.
+    - `<Suspense />` provides a fallback UI (like a loader) during the lazy load.
+    - This colud be a good solution when the modal has heavy content (like charts, maps, complex forms ...etc)
 
 ## How to use
 
