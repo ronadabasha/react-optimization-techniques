@@ -1,23 +1,22 @@
-# React Optimization Techniques
+# Lazy loading modal
 
-This repository contains isolated examples of React performance and architecture optimization techniques.
+## When could be lazy loading useful for Modals?
 
-## Branches
+- When modal have heavy content (like maps, charts, complex forms)
+- When modal is not used on page load (for cases when we open modal on button click)
+- When we have multiple modals in one page.
+- ...etc
 
-- [`route-based-lazy-loading`](https://github.com/ronadabasha/react-optimization-techniques/tree/route-based-lazy-loading)
+## How to implement lazy load for Modals?
 
-  - Shows route-level lazy loading using `react-router-dom`, `React.lazy()`, `<Suspense />`.
-    - `React.lazy()` loads the component only when the route is matched, reducing the initial JS bundle size.
-    - `<Suspense />` provides a fallback UI (like a loader) during the lazy load.
-
-- [`slider-lazy-loading`](https://github.com/ronadabasha/react-optimization-techniques/tree/lazy-loading-slider)
-  - Demonstrates lazy loading of image sliders.
+1. Create a component for the modal
+2. Use `React.lazy()` to import this modal
+3. Use `<Suspense />`to provide a fallback UI during lazy loading.
 
 ## How to use
 
 1. Clone the repository.
-2. Checkout the branch you're interested in.
-3. Install dependencies and start the dev server:
+2. Install dependencies and start the dev server:
 
    ```bash
    npm install
