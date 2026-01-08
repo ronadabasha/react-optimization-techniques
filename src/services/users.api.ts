@@ -1,13 +1,16 @@
-import { User } from "../models/user";
+import { User } from "../models/User";
 
-export async function fetchUsers(): Promise<User[]> {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  
-  if (!response.ok) {
-    throw new Error("Failed to fetch users");
+export const fetchUsers = async (searchTerm: string = ""): Promise<User[]> => {
+  const res = await fetch("https://dummyjson.com/users?limit=1000");
+  const data = await res.json();
+
+  let usersArray: User[] = data.users;
+
+  if (searchTerm) {
+    usersArray = usersArray.filter((user) =>
+      user.firstName.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   }
 
-  const data: User[] = await response.json();
-  console.log('users', data)
-  return data;
-}
+  return usersArray;
+};
