@@ -22,6 +22,27 @@ This repository contains isolated examples of React performance and architecture
     - `<Suspense />` provides a fallback UI (like a loader) during the lazy load.
     - This colud be a good solution when the modal has heavy content (like charts, maps, complex forms ...etc)
 
+- [`react-optimization-dashboard`](https://github.com/ronadabasha/react-optimization-techniques/tree/react-optimization-dashboard)
+
+  - Demonstrates performance optimization techniques for large data dashboards in React.
+    The example loads and renders thousands of users efficiently using modern best practices.
+
+    **Technologies & techniques used:**
+
+    - React Query for data fetching, caching, and background refetching.
+    - Virtualized lists (`react-window`) to render only visible rows and avoid DOM overload.
+    - Debounced search input to minimize unnecessary renders and network requests.
+    - Custom hooks (`useUsers`, `useDebounce`) for separation of concerns and testability.
+    - API layer abstraction (`services/users.api.ts`) for clean architecture.
+    - Type-safe models (`models/User.ts`) with TypeScript.
+
+    **What this example demonstrates:**
+
+    - How to scale UI performance when rendering large datasets.
+    - How to isolate network logic from UI components.
+    - How to avoid unnecessary re-renders using memoization and virtualization.
+    - How to structure a React project for maintainability and scalability.
+
 ## How to use
 
 1. Clone the repository.
